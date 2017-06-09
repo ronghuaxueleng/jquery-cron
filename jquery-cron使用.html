@@ -1,0 +1,36 @@
+<html>
+<head>
+</head>
+<body>
+
+<script type="text/javascript"
+        src="jquery-1.7.1.js"></script>
+
+<script type="text/javascript" src="cron/jquery-cron.js"></script>
+
+<link type="text/css" href="cron/jquery-cron.css" rel="stylesheet" />
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#selector').cron({
+		onChange: function() {
+			$('#cron').val($(this).cron("value"));
+		}
+	}); // apply cron with default options
+});
+</script>
+<!--- somewhere within <body> -->
+<div id='selector'></div>
+<input id="cron" />
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
